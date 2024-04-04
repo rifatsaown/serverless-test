@@ -1,0 +1,14 @@
+org: rifatsaown
+app: test-serverless-function
+service: test-serverless-function
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: "*"
